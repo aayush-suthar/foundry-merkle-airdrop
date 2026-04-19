@@ -24,8 +24,6 @@ contract MerkleAidropTest is Test {
     uint256 userPrivateKey;
 
     function setUp() public {
-        // DeployMarkleAirdrop deployer = new DeployMarkleAirdrop();
-        // (airdrop, token) = deployer.run();
         token = new BagelToken();
         airdrop = new MerkleAirdrop(ROOT , token);
         token.mint(token.owner(), AMOUNT_TO_SEND);
